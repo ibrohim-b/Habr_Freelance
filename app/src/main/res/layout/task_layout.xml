@@ -5,13 +5,5 @@
     android:paddingVertical="25px"
     android:paddingHorizontal="20px"
     >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/task_titleTV"
-        style="taskTitle"
-        android:text="23fsqeqcfe"
-        />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
