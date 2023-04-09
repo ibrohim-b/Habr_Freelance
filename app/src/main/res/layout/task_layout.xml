@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingVertical="25px"
-    android:paddingHorizontal="20px"
-    >
+    android:paddingHorizontal="20px">
+    <TextView
+        android:id="@+id/taskTitleTV"
+        style="@style/taskTitle"
+        android:text="Интеграция битрикс с 1с"
+
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/taskPriceTV"
+        style="@style/taskPrice"
+        android:text="4 000 руб."
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/taskPriceIconIV"
+        style="@style/taskPriceIcon"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        style="@style/taskPrice"
+        android:text="за проект"
+        android:layout_marginTop="12.5dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        style="@style/taskResponsesIcon"
+        android:id="@+id/taskResponseIV"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        style="@style/taskResponses"
+        android:id="@+id/taskResponsesTV"
+        android:text="7 откликов"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        style="@style/taskViewsIcon"
+        android:id="@+id/taskViewsIV"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        style="@style/taskViews"
+        android:id="@+id/taskViewsTV"
+        android:text="7 просмотров"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        style="@style/taskPublishedIcon"
+        android:id="@+id/taskPublishedIV"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        style="@style/taskPublished"
+        android:id="@+id/taskPublishedTV"
+        android:text="7 минут назад"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
