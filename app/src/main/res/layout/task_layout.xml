@@ -7,28 +7,64 @@
     android:paddingVertical="25px"
     android:paddingHorizontal="20px">
     <TextView
+        android:textStyle="bold"
         android:id="@+id/taskTitleTV"
         style="@style/taskTitle"
         android:text="Интеграция битрикс с 1с"
-
-        tools:ignore="MissingConstraints" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
     <TextView
         android:id="@+id/taskPriceTV"
         style="@style/taskPrice"
         android:text="4 000 руб."
-        tools:ignore="MissingConstraints" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/taskTitleTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/taskPriceStatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textStyle="bold"
+        android:textSize="30sp"
+        style="@style/taskPriceStatus"
+        app:layout_constraintTop_toTopOf="@id/taskPriceIconIV"
+        app:layout_constraintBottom_toBottomOf="@id/taskPriceIconIV"
+        app:layout_constraintEnd_toStartOf="@id/taskPriceIconIV"
     <ImageView
         android:id="@+id/taskPriceIconIV"
         style="@style/taskPriceIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/taskPriceTV"
+        app:layout_constraintTop_toTopOf="@+id/taskPriceTV"
+        android:src="@drawable/price"
         tools:ignore="MissingConstraints" />
-
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/taskTitleTV"
+        app:layout_constraintEnd_toEndOf="parent"
         style="@style/taskPrice"
         android:text="за проект"
         android:layout_marginTop="12.5dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
+        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/responses"
         style="@style/taskResponsesIcon"
         android:id="@+id/taskResponseIV"
         tools:ignore="MissingConstraints" />
@@ -36,9 +72,21 @@
         style="@style/taskResponses"
         android:id="@+id/taskResponsesTV"
         android:text="7 откликов"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="@id/taskResponseIV"
+        app:layout_constraintStart_toEndOf="@id/taskResponseIV"/>
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
+        app:layout_constraintStart_toEndOf="@id/taskResponsesTV"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/views"
         style="@style/taskViewsIcon"
         android:id="@+id/taskViewsIV"
         tools:ignore="MissingConstraints" />
@@ -46,9 +94,20 @@
         style="@style/taskViews"
         android:id="@+id/taskViewsTV"
         android:text="7 просмотров"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="@id/taskViewsIV"
+        app:layout_constraintStart_toEndOf="@id/taskViewsIV"/>
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
+        app:layout_constraintStart_toEndOf="@id/taskViewsTV"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/published"
         style="@style/taskPublishedIcon"
         android:id="@+id/taskPublishedIV"
         tools:ignore="MissingConstraints" />
@@ -56,6 +115,22 @@
         style="@style/taskPublished"
         android:id="@+id/taskPublishedTV"
         android:text="7 минут назад"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="@id/taskPublishedIV"
+        app:layout_constraintStart_toEndOf="@id/taskPublishedIV"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
+        app:layout_constraintTop_toBottomOf="@id/taskResponseIV"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/tag_layout"
+        android:id="@+id/taskTagsRV"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

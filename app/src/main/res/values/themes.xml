@@ -16,92 +16,39 @@
     <style name="taskTitle">
         <item name="color">#4f6173</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
     </style>
     <style name="taskPrice">
         <item name="color">#50C1B4</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toTopOf">@id/taskTitleTV</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
     </style>
     <style name="taskPriceIcon">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintEnd_toStartOf">@id/taskPriceTV</item>
-        <item name="layout_constraintTop_toTopOf">@id/taskPriceTV</item>
-        <item name="android:layout_marginEnd">5dp</item>
-        <item name="android:src">@drawable/price_certain</item>
+        <item name="android:tint">#A8C5CF</item>
+    </style>
+    <style name="taskPriceStatus">
+        <item name="android:textColor">#4f6173</item>
     </style>
     <style name="taskResponses">
         <item name="color">#50C1B4</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toBottomOf">@id/taskTitleTV</item>
-        <item name="layout_constraintStart_toEndOf">@id/taskResponseIV</item>
-        <item name="layout_constraintTop_toTopOf">@id/taskResponseIV</item>
-        <item name="android:layout_marginStart">5dp</item>
     </style>
     <style name="taskResponsesIcon">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toBottomOf">@id/taskTitleTV</item>
-        <item name="layout_constraintStart_toStartOf">@id/taskTitleTV</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:src">@drawable/responses</item>
     </style>
     <style name="taskPublished">
         <item name="color">#50C1B4</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toBottomOf">@id/taskTitleTV</item>
-        <item name="layout_constraintStart_toEndOf">@id/taskPublishedIV</item>
-        <item name="layout_constraintTop_toTopOf">@id/taskPublishedIV</item>
-        <item name="android:layout_marginStart">5dp</item>
     </style>
     <style name="taskPublishedIcon">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toBottomOf">@id/taskTitleTV</item>
-        <item name="layout_constraintStart_toEndOf">@id/taskViewsTV</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:src">@drawable/published</item>
     </style>
     <style name="taskViews">
         <item name="color">#50C1B4</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toTopOf">@id/taskViewsIV</item>
-        <item name="layout_constraintStart_toEndOf">@id/taskViewsIV</item>
-        <item name="android:layout_marginStart">5dp</item>
     </style>
     <style name="taskViewsIcon">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="layout_constraintTop_toBottomOf">@id/taskTitleTV</item>
-        <item name="layout_constraintStart_toEndOf">@id/taskResponsesTV</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:src">@drawable/views</item>
     </style>
 
 
     <style name="taskDescTitle">
-        <item name="android:layout_marginHorizontal">10dp</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
         <item name="color">#4f6173</item>
         <item name="android:textSize">20dp</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginEnd">10dp</item>
-<!--        <item name="paddingStart">10dp</item>-->
     </style>
 </resources>
