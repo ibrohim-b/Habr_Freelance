@@ -76,10 +76,50 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/taskDescTitleTV"
         app:layout_constraintEnd_toEndOf="@id/taskDescTitleTV"
-        android:text="fadjsjfhdkalaslkjfd"
+        android:text="И так далее..
++ Eсть возможность делать скриншот финальной странцы и сохранять в отдельную папку, как подтверждение правильности отправки формы
+2. Список сайтов, с который не были отправлены формы с объяснением ошибки: форма не найдена/сайт недоступен/после нажатия на кнопку не происходит перенаправление страницы и т.д.
+Файл первый список сайтоы где было успешно заполнена форма, и отправлена форма.
+Файл второй список результатов должно быть видно на каких сайтах было успешно заполнена, но не понятно отправлена ли успешна форма.
+Файл третий список с не рабочими сайтами, или сайтами где не возможно отправить форму."
         app:layout_constraintTop_toBottomOf="@id/taskDescTagsRV"
         android:layout_marginTop="15dp"
         android:textStyle="normal|bold"
         android:id="@+id/taskDescDescTV"/>
-
+    <ImageView
+        app:tint="#A8C5CF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/files"
+        app:layout_constraintTop_toBottomOf="@id/taskDescDescTV"
+        app:layout_constraintStart_toStartOf="@id/taskDescDescTV"
+        android:layout_marginTop="15dp"
+        android:id="@+id/taskDescFilesIV"
+        />
+    <TextView
+        android:id="@+id/taskDescFilesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Файлы"
+        style="@style/taskDescTitle"
+        app:layout_constraintStart_toEndOf="@id/taskDescFilesIV"
+        app:layout_constraintBottom_toBottomOf="@id/taskDescFilesIV"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/taskDescDescTV"
+        app:layout_constraintEnd_toEndOf="@id/taskDescDescTV"
+        android:id="@+id/taskDescFilesLL"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/taskDescFilesIV"
+        ></LinearLayout>
+    <Button
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/taskDescDescTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Откликнуться"
+        app:layout_constraintTop_toBottomOf="@id/taskDescFilesLL"
+        android:backgroundTint="#8bd2cc"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.habrfreelance.data_classes.task_min.TaskX
 
 class TaskAdapter(val tasks: List<TaskX>, val tagOnClick: (String) -> Unit, itemOnClick: (Int) -> Unit) :
     RecyclerView.Adapter<TaskAdapter.MyViewHolder>() {
@@ -31,10 +32,12 @@ class TaskAdapter(val tasks: List<TaskX>, val tagOnClick: (String) -> Unit, item
         holder.published.text = tasks[position].published_at
         holder.price.text = tasks[position].price
         val adapter = TagAdapter(tasks[position].tags, tagOnClick)
+
         holder.tags.adapter = adapter
         holder.title.setOnClickListener {
             tasks[position].id
         }
+
 
 
     }

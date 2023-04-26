@@ -1,4 +1,4 @@
-package com.example.habrfreelance
+package com.example.habrfreelance.data_classes.task_min
 
 data class TaskX(
     val id: String,
