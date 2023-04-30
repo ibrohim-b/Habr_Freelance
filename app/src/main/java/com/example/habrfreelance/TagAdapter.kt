@@ -15,7 +15,7 @@ class TagAdapter(val tags: List<String>, val itemOnClick: (String) -> Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val myViewHolder =
-            LayoutInflater.from(parent.context).inflate(R.layout.task_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.tag_layout, parent, false)
         return MyViewHolder(myViewHolder)
     }
 

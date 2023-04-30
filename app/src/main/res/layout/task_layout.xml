@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingHorizontal="20px"
     android:background="@drawable/task_border"
-    android:paddingTop="10dp"
-    >
+    android:paddingHorizontal="20px"
+    android:paddingTop="10dp">
 
     <TextView
-        android:textStyle="bold"
         android:id="@+id/taskTitleTV"
         style="@style/taskTitle"
-        android:text="Интеграция битрикс с 1с"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:text="Интеграция битрикс с 1с"
+        android:textStyle="bold"
+        android:maxWidth="275dp"
+        app:layout_constraintEnd_toStartOf="@id/taskPriceStatusTV"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/taskPriceTV"
         style="@style/taskPrice"
-        android:text="4 000 руб."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/taskTitleTV"
+        android:text="4 000 руб."
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        />
+        app:layout_constraintTop_toTopOf="@+id/taskTitleTV"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/taskPriceStatusTV"
+        style="@style/taskPriceStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="="
-        android:textStyle="bold"
         android:textSize="30sp"
-        style="@style/taskPriceStatus"
-        app:layout_constraintTop_toTopOf="@id/taskPriceIconIV"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/taskPriceIconIV"
-        app:layout_constraintEnd_toStartOf="@id/taskPriceIconIV"/>
+        app:layout_constraintEnd_toStartOf="@id/taskPriceIconIV"
+        app:layout_constraintTop_toTopOf="@id/taskPriceIconIV" />
+
     <ImageView
         android:id="@+id/taskPriceIconIV"
         style="@style/taskPriceIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/price"
         app:layout_constraintEnd_toStartOf="@id/taskPriceTV"
         app:layout_constraintTop_toTopOf="@+id/taskPriceTV"
-        android:src="@drawable/price"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/taskPriceExtraTV"
         style="@style/taskPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12.5dp"
         android:text="за проект"
         app:layout_constraintBottom_toBottomOf="@+id/taskPriceIconIV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/taskTitleTV"
+        app:layout_constraintTop_toBottomOf="@+id/taskPriceTV"
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:id="@+id/taskResponseIV"
+        style="@style/taskResponsesIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
-        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
         android:layout_marginTop="5dp"
         android:src="@drawable/responses"
-        style="@style/taskResponsesIcon"
-        android:id="@+id/taskResponseIV"
+        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -87,15 +87,15 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:id="@+id/taskViewsIV"
+        style="@style/taskViewsIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
-        app:layout_constraintStart_toEndOf="@id/taskResponsesTV"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/views"
-        style="@style/taskViewsIcon"
-        android:id="@+id/taskViewsIV"
+        app:layout_constraintStart_toEndOf="@id/taskResponsesTV"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -110,15 +110,15 @@
         app:layout_constraintTop_toTopOf="@id/taskViewsIV" />
 
     <ImageView
+        android:id="@+id/taskPublishedIV"
+        style="@style/taskPublishedIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
-        app:layout_constraintStart_toEndOf="@id/taskViewsTV"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/published"
-        style="@style/taskPublishedIcon"
-        android:id="@+id/taskPublishedIV"
+        app:layout_constraintStart_toEndOf="@id/taskViewsTV"
+        app:layout_constraintTop_toBottomOf="@id/taskTitleTV"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -134,17 +134,17 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskTagsRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/taskTitleTV"
         app:layout_constraintTop_toBottomOf="@id/taskResponseIV"
-        android:layout_marginTop="10dp"
-        tools:listitem="@layout/tag_layout"
-        android:layout_marginBottom="5dp"
-        android:id="@+id/taskTagsRV"/>
+        tools:listitem="@layout/tag_layout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
