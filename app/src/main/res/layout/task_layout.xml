@@ -133,7 +133,33 @@
         app:layout_constraintTop_toTopOf="@id/taskPublishedIV"
         tools:ignore="MissingConstraints" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/taskTagsFlL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerDrawableVertical="@drawable/tags_divider"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        app:alignContent="stretch"
+        app:justifyContent="flex_start"
+        app:showDivider="middle|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
+        app:layout_constraintTop_toBottomOf="@id/taskResponseIV"
+        ></com.google.android.flexbox.FlexboxLayout>
+
+    <!--  <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskTagsLL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/taskTitleTV"
+        app:layout_constraintTop_toBottomOf="@id/taskResponseIV"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" /> -->
+
+    <!--<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskTagsRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -144,7 +170,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/taskTitleTV"
         app:layout_constraintTop_toBottomOf="@id/taskResponseIV"
-        tools:listitem="@layout/tag_layout" />
+        tools:listitem="@layout/tag_layout" /> -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

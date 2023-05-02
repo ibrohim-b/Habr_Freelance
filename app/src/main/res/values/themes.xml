@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="taskTitle">
-        <item name="color">#4f6173</item>
+        <item name="color">#000000</item>
         <item name="android:textSize">20dp</item>
     </style>
     <style name="taskPrice">

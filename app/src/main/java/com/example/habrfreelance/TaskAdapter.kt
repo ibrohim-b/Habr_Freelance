@@ -3,9 +3,13 @@ package com.example.habrfreelance
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.marginEnd
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habrfreelance.data_classes.TaskX
+import com.example.habrfreelance.data_classes.task
+import com.google.android.flexbox.FlexboxLayout
 
 class TaskAdapter(val tasks: List<TaskX>, val tagOnClick: (String) -> Unit,var itemOnClick: (Int) -> Unit,var loadMoreOnClick: (String) -> Unit) :
     RecyclerView.Adapter<TaskAdapter.MyViewHolder>() {
@@ -16,10 +20,12 @@ class TaskAdapter(val tasks: List<TaskX>, val tagOnClick: (String) -> Unit,var i
         val views: TextView? = item.findViewById(R.id.taskViewsTV)
         val published: TextView? = item.findViewById(R.id.taskPublishedTV)
         val price: TextView? = item.findViewById(R.id.taskPriceTV)
-        val tags: RecyclerView? = item.findViewById(R.id.taskTagsRV)
+//        val tags: RecyclerView? = item.findViewById(R.id.taskTagsRV)
+        val tags: FlexboxLayout? = item.findViewById(R.id.taskTagsFlL)
         val priceExtra :TextView? = item.findViewById(R.id.taskPriceExtraTV)
         val priceStatus :TextView? = item.findViewById(R.id.taskPriceStatusTV)
         val loadMore :TextView? = item.findViewById(R.id.loadMore)
+
 
     }
 
@@ -55,9 +61,30 @@ class TaskAdapter(val tasks: List<TaskX>, val tagOnClick: (String) -> Unit,var i
                 holder.price!!.text = tasks[position].price
             }
             holder.published!!.text = tasks[position].published_at
-            val adapter = TagAdapter(tasks[position].tags.map { it.title }, tagOnClick)
+//            val lp = FlexboxLayout.LayoutParams(
+//                FlexboxLayout.LayoutParams.WRAP_CONTENT,
+//                FlexboxLayout.LayoutParams.WRAP_CONTENT
+//            )
+            val lp = FlexboxLayout.LayoutParams(
+                FlexboxLayout.LayoutParams.WRAP_CONTENT,
+                FlexboxLayout.LayoutParams.WRAP_CONTENT
+            )
+            lp.setMargins(50, 50, 50, 50)
 
-            holder.tags!!.adapter = adapter
+            for (tag in tasks[position].tags) {
+                val inflater = LayoutInflater.from(holder.tags!!.context)
+                val tagL = inflater.inflate(R.layout.tag_layout, null)
+                if (holder.tags!!.childCount > 7) {
+                    tagL.findViewById<TextView>(R.id.tagTV).text = "..."
+                    break
+                }
+                tagL.findViewById<TextView>(R.id.tagTV).text = tag.title
+                tagL.findViewById<TextView>(R.id.tagTV).layoutParams = lp
+                tagL.setOnClickListener {
+                    tagOnClick.invoke(tag.title)
+                }
+                holder.tags.addView(tagL)
+            }
             holder.title.setOnClickListener {
                 itemOnClick.invoke(tasks[position].id.toInt())
             }
